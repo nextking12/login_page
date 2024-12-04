@@ -21,7 +21,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @RestController
 @RequestMapping("/login")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins = "http://localhost:3000")
 public class LoginController {
 
     @Autowired LoginRepository loginRepository;
