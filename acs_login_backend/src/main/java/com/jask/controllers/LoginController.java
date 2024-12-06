@@ -20,13 +20,13 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 
 @RestController
-@RequestMapping("/login")
+@RequestMapping("/")
 @CrossOrigin(origins = "http://localhost:3000")
 public class LoginController {
 
     @Autowired LoginRepository loginRepository;
 
-    @GetMapping
+    @GetMapping("/login")
     public List <LoginClass> getLogins() {
         return loginRepository.findAll();
     }

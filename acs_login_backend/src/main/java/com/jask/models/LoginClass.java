@@ -13,10 +13,10 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name="user_login_db")
+@Table(name = "user_login_db")
 public class LoginClass {
 
-    @Id 
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
@@ -32,10 +32,7 @@ public class LoginClass {
     @Column(name = "email", unique = true)
     private String email;
 
+    @Column(name = "admin")
     private Boolean admin;
-
-
-
-
 
 }
