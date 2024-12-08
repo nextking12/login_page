@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-function UserList() {
+function LoginList() {
     const [login, setLogin] = useState([]);
 
     useEffect(() => {
         axios.get('http://localhost:8080/api/login')
           .then(response => {
-            setUsers(response.data);
+            setLogin(response.data);
           })
           .catch(error => {
             console.error('Error fetching users:', error);
