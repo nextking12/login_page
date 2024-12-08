@@ -5,7 +5,7 @@ function LoginList() {
     const [login, setLogin] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:8080/api/login')
+        axios.get('http://localhost:8080/login')
           .then(response => {
             setLogin(response.data);
           })

@@ -7,6 +7,7 @@ import './components/loginList'
 function App() {
   return (
     <Router>
+      <script src="http://localhost:3000"></script>
       <div className="container">
         <nav className="navbar navbar-expand-lg navbar-light bg-light mb-4">
           <div className="container-fluid">

@@ -18,7 +18,7 @@ function CreateLogin() {
     };
 
     axios
-      .post("http://localhost:8080/api/logins", newLogin)
+      .post("http://localhost:8080/login", newLogin)
       .then((response) => {
         alert("Login created successfully!");
         // Reset form
