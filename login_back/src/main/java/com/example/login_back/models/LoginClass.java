@@ -17,4 +17,5 @@ public class LoginClass {
     @GeneratedValue
     private Integer id;
 
+
 }
