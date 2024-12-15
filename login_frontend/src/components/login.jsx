@@ -5,7 +5,7 @@ function CreateLogin() {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
-  const [admin, setAdmin] = useState(false);
+ 
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -14,18 +14,18 @@ function CreateLogin() {
       firstName,
       lastName,
       email,
-      admin,
+     
     };
 
     axios
-      .post("http://localhost:8080/login", newLogin)
+      .post("http://localhost:8080", newLogin)
       .then((response) => {
         alert("Login created successfully!");
         // Reset form
         setFirstName("");
         setLastName("");
         setEmail("");
-        setAdmin(false);
+        
       })
       .catch((error) => {
         console.error("Error creating login:", error);
@@ -64,14 +64,7 @@ function CreateLogin() {
             required
           />
         </div>
-        <div>
-          <label>Admin?:</label>
-          <input
-            type="checkbox"
-            checked={admin}
-            onChange={(e) => setAdmin(e.target.checked)}
-          />
-        </div>
+        
         <button type="submit">Create Login</button>
       </form>
     </div>

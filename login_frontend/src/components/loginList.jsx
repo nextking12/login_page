@@ -5,7 +5,7 @@ function LoginList() {
     const [login, setLogin] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:8080/login')
+        axios.get('http://localhost:8080/')
           .then(response => {
             setLogin(response.data);
           })
@@ -24,9 +24,7 @@ function LoginList() {
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Email</th>
-                <th>Admin</th>
-
-              </tr>
+                </tr>
             </thead>
             <tbody>
               {login.map(login => (
@@ -35,7 +33,7 @@ function LoginList() {
                   <td>{login.firstName}</td>
                   <td>{login.lastName}</td>
                   <td>{login.email} </td>
-                  <td>{login.admin} </td>
+                
                 </tr>
               ))}
             </tbody>
