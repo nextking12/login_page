@@ -13,7 +13,7 @@ import lombok.Data;
 
 @Entity
 @Data
-@Table(name = "")
+@Table(name = "login_db")
 public class LoginClass {
 
     @Id

@@ -1,4 +1,4 @@
-package com.example.login_back;
+package com.example.login_back.controllers;
 
 import java.util.List;
 
