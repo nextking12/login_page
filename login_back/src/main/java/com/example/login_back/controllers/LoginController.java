@@ -30,18 +30,20 @@ public class LoginController {
         return loginRepository.findAll();
     }
 
+    @PostMapping
+    public LoginClass createLogin(@RequestBody LoginClass login) {
+        return loginRepository.save(login);
+    }
+
     @GetMapping("/{id}")
-    public ResponseEntity<LoginClass> getUserById(@PathVariable int id) {
+    public ResponseEntity<LoginClass> getLoginById(@PathVariable int id) {
         return loginRepository.findById(id)
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
             
     }
 
-    @PostMapping("/logins")
-    public LoginClass createLogin(@RequestBody LoginClass user) {
-        return loginRepository.save(user);
-    }
+   
 
 
 }
