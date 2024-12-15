@@ -2,7 +2,6 @@ package com.example.login_back.controllers;
 
 import java.util.List;
 
-import javax.security.auth.login.AppConfigurationEntry.LoginModuleControlFlag;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
